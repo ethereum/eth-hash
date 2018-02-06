@@ -1,7 +1,7 @@
-<PROJECT_NAME>
+eth-hash
 ==============================
 
-<SHORT_DESCRIPTION>
+The Ethereum hashing function, keccak256, sometimes (erroneously) called sha256
 
 Contents
 --------
@@ -9,7 +9,7 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    <MODULE_NAME>
+    eth_hash
     releases
 
 

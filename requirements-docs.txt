@@ -1,1 +1,1 @@
-<PYPI_NAME>[doc]
+eth-hash[doc]
