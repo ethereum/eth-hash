@@ -1,4 +1,4 @@
 
 
 def test_import():
-    import <MODULE_NAME>
+    import eth_hash
