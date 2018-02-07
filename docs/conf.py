@@ -37,6 +37,7 @@ with open (os.path.join(DIR, '../setup.py'), 'r') as f:
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.autosectionlabel',
+    'sphinx.ext.doctest',
     'sphinx.ext.intersphinx',
 ]
 
@@ -275,3 +276,14 @@ texinfo_documents = [
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3.5', None),
 }
+
+# -- Doctest configuration ----------------------------------------
+
+import doctest
+
+doctest_default_flags = (0
+    | doctest.DONT_ACCEPT_TRUE_FOR_1
+    | doctest.ELLIPSIS
+    | doctest.IGNORE_EXCEPTION_DETAIL
+    | doctest.NORMALIZE_WHITESPACE
+)
