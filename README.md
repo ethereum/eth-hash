@@ -9,7 +9,13 @@
 
 The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3
 
-* Python 3.5+ support
+Note: the similarly named [pyethash](https://github.com/ethereum/ethash)
+has a completely different use: it generates proofs of work.
+
+This is a low-level library, intended to be used internally by other Ethereum tools.
+If you're looking for a convenient hashing tool, check out
+[`eth_utils.keccak()`](https://github.com/ethereum/eth-utils#crypto-utils)
+which will be a little friendlier, and provide access to other helpful utilities.
 
 Read more in the [documentation on ReadTheDocs](http://eth-hash.readthedocs.io/). [View the change log](http://eth-hash.readthedocs.io/en/latest/releases.html).
 
