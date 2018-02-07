@@ -45,6 +45,7 @@ setup(
     url='https://github.com/ethereum/eth-hash',
     include_package_data=True,
     install_requires=[
+        "pycryptodome>=3.4.6",
     ],
     setup_requires=['setuptools-markdown'],
     extras_require=extras_require,
