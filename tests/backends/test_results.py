@@ -2,7 +2,7 @@ import pytest
 
 
 @pytest.fixture
-def keccak():
+def keccak_auto():
     from eth_hash.auto import keccak
     return keccak
 
