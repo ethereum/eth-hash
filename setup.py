@@ -45,7 +45,6 @@ setup(
     url='https://github.com/ethereum/eth-hash',
     include_package_data=True,
     install_requires=[
-        "eth-utils>=0.7.4,<1.0.0",
     ],
     setup_requires=['setuptools-markdown'],
     extras_require=extras_require,
