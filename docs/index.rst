@@ -9,8 +9,10 @@ Contents
 .. toctree::
     :maxdepth: 3
 
-    eth_hash
+    quickstart
     releases
+    eth_hash.backends
+    eth_hash
 
 
 Indices and tables

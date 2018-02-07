@@ -35,6 +35,7 @@ test-all:
 	tox
 
 build-docs:
+	rm docs/eth_hash.backends.rst
 	sphinx-apidoc -o docs/ . setup.py "*conftest*"
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
