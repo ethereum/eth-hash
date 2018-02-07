@@ -4,6 +4,6 @@ from Crypto.Hash import (
 
 
 def keccak256(prehash: bytes) -> bytes:
-    hash = keccak.new(digest_bits=256)
-    hash.update(prehash)
-    return hash.digest()
+    hasher = keccak.new(digest_bits=256)
+    hasher.update(prehash)
+    return hasher.digest()
