@@ -37,7 +37,7 @@ extras_require['dev'] = (
 setup(
     name='eth-hash',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='0.1.0-alpha.1',
+    version='0.1.0-alpha.2',
     description="""eth-hash: The Ethereum hashing function, keccak256, sometimes (erroneously) called sha256""",
     long_description_markdown_filename='README.md',
     author='Jason Carver',
