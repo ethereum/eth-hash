@@ -29,8 +29,23 @@ Compute a Keccak256 Hash
 Select one of many installed backends
 ---------------------------------------
 
-If you have several backends installed, and you want to
-specify which one to use, you can select it like so:
+If you have several backends installed, you may want to
+explicitly specify which one to load. You can specify
+in an environment variable, or at runtime.
+
+Specify backend by environment variable
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: shell
+
+  $ ETH_HASH_BACKEND="pysha3" python
+  >>> from eth_hash.auto import keccak
+  # This runs with the pysha3 backend
+  >>> keccak(b'')
+  b"\xc5\xd2F\x01\x86\xf7#<\x92~}\xb2\xdc\xc7\x03\xc0\xe5\x00\xb6S\xca\x82';{\xfa\xd8\x04]\x85\xa4p"
+
+Specify backend at runtime
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: python
 

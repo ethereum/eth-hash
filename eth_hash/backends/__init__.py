@@ -6,3 +6,8 @@ an :class:`ImportError`.
 
 See :ref:`Choose a hashing backend` for more.
 '''
+
+SUPPORTED_BACKENDS = [
+    'pycryptodome',  # prefer this over pysha3, for pypy3 support
+    'pysha3',
+]
