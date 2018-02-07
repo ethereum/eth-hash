@@ -1,7 +1,7 @@
 eth-hash
 ==============================
 
-The Ethereum hashing function, keccak256, sometimes (erroneously) called sha256
+The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3
 
 Contents
 --------

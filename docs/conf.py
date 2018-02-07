@@ -250,7 +250,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'eth-hash', 'eth-hash Documentation',
-   'Jason Carver', 'eth-hash', 'The Ethereum hashing function, keccak256, sometimes (erroneously) called sha256',
+   'Jason Carver', 'eth-hash', 'The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3',
    'Miscellaneous'),
 ]
 

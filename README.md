@@ -7,7 +7,7 @@
 [![Docs build](https://readthedocs.org/projects/eth-hash/badge/?version=latest)](http://eth-hash.readthedocs.io/en/latest/?badge=latest)
    
 
-The Ethereum hashing function, keccak256, sometimes (erroneously) called sha256
+The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3
 
 * Python 3.5+ support
 
