@@ -1,5 +1,9 @@
 import pytest
 
+# Note that this file is symlink'd in all backend folders, so a change here is
+# automatically shared across backend tests. If you want to add a backend-specific
+# test, add it to a new file.
+
 
 @pytest.fixture
 def keccak_auto():
