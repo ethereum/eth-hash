@@ -45,4 +45,10 @@ def choose_available_backend():
             return load_backend(backend)
         except ImportError:
             pass
-    raise ImportError("None of these backends are available: %r" % SUPPORTED_BACKENDS)
+    raise ImportError(
+        "None of these hashing backends are installed: %r.\n"
+        "Install with `pip install eth-hash[%s]`." % (
+            SUPPORTED_BACKENDS,
+            SUPPORTED_BACKENDS[0],
+        )
+    )
