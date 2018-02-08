@@ -1,6 +1,16 @@
 Release Notes
 =============
 
+v0.1.0-alpha.3
+--------------
+
+Released Feb 7, 2018
+
+- Add pycryptodome backend support
+- Add pysha3 backend support
+- Can specify backend in environment variable ``ETH_HASH_BACKEND``
+- New :ref:`Quickstart` docs
+
 v0.1.0-alpha.2
 --------------
 
