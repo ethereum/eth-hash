@@ -1,7 +1,7 @@
 # eth-hash
 
 [![Join the chat at https://gitter.im/ethereum/web3.py](https://badges.gitter.im/ethereum/web3.py.svg)](https://gitter.im/ethereum/web3.py?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/carver/eth-hash.png)](https://travis-ci.org/carver/eth-hash)
+[![Build Status](https://travis-ci.org/ethereum/eth-hash.png)](https://travis-ci.org/ethereum/eth-hash)
 [![PyPI version](https://badge.fury.io/py/eth-hash.svg)](https://badge.fury.io/py/eth-hash)
 [![Python versions](https://img.shields.io/pypi/pyversions/eth-hash.svg)](https://pypi.python.org/pypi/eth-hash)
 [![Docs build](https://readthedocs.org/projects/eth-hash/badge/?version=latest)](http://eth-hash.readthedocs.io/en/latest/?badge=latest)
@@ -42,7 +42,7 @@ You can set up your dev environment with:
 
 ```sh
 
-git clone git@github.com:carver/eth-hash.git
+git clone git@github.com:ethereum/eth-hash.git
 cd eth-hash
 virtualenv -p python3 venv
 . venv/bin/activate
