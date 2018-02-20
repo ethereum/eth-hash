@@ -37,6 +37,20 @@ You may also compute hashes incrementally
   >>> digest.digest()
   b'6\x91l\xdd50\xd6[\x7f\xf9B\xff\xc9SW\x98\xc3\xaal\xd9\xde\xdd6I\xb7\x91\x9e\xf4`pl\x08'
 
+Digests may be copied as well.
+
+.. doctest::
+
+  >>> from eth_hash.auto import keccak
+  >>> digest = keccak.Digest(b'part-a')
+  >>> digest_copy = digest.copy()
+  >>> digest.update(b'part-b')
+  >>> digest.digest()
+  b'6\x91l\xdd50\xd6[\x7f\xf9B\xff\xc9SW\x98\xc3\xaal\xd9\xde\xdd6I\xb7\x91\x9e\xf4`pl\x08'
+  >>> digest_copy.update(b'part-c')
+  >>> digest_copy.digest()
+  b'\xffcy45\xea\xdd\xdf\x8e(\x1c\xfcF\xf3\xd4\xa1S\x0f\xdf\xd8\x01!\xb2(\xe1\xc7\xc6\xa3\x08\xc3\n\x0b'
+
 
 Select one of many installed backends
 ---------------------------------------
