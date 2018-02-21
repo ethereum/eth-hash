@@ -10,13 +10,13 @@ class Keccak256:
 
         return self.hasher(preimage)
 
-    def Digest(self, part):
+    def new(self, part):
         if not isinstance(part, bytes):
             raise TypeError("Can only compute the hash of a `bytes` value, not %r" % part)
-        return Digest(part, keccak_fn=self.hasher)
+        return PreImage(part, keccak_fn=self.hasher)
 
 
-class Digest:
+class PreImage:
     def __init__(self, *parts, keccak_fn):
         self.preimage_parts = list(parts)
         self.keccak_fn = keccak_fn
