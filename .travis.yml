@@ -45,7 +45,7 @@ matrix:
       env: TOX_POSARGS="-e pypy3-core"
 
     # backends
-    - python: "pypy3"
+    - python: "pypy3.5"
       env: TOX_POSARGS="-e pypy3-backend-pycryptodome"
 
 cache:
