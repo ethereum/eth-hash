@@ -1,6 +1,14 @@
 Release Notes
 =============
 
+v0.1.0
+--------------
+
+Released Feb 28, 2018
+
+- Add support for :class:`bytearray` input to keccak
+- Add support for incrementally buildng hash results
+
 v0.1.0-alpha.3
 --------------
 
