@@ -22,8 +22,17 @@ Read more in the [documentation on ReadTheDocs](http://eth-hash.readthedocs.io/)
 ## Quickstart
 
 ```sh
-pip install eth-hash
+pip install eth-hash[pycryptodome]
 ```
+
+```py
+>>> from eth_hash.auto import keccak
+>>> keccak(b'')
+b"\xc5\xd2F\x01\x86\xf7#<\x92~}\xb2\xdc\xc7\x03\xc0\xe5\x00\xb6S\xca\x82';{\xfa\xd8\x04]\x85\xa4p"
+```
+
+See the [docs](http://eth-hash.readthedocs.io/en/latest/quickstart.html#quickstart)
+for more about choosing and installing backends.
 
 ## Developer setup
 
