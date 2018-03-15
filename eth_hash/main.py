@@ -10,7 +10,7 @@ class Keccak256:
                 "Can only compute the hash of `bytes` or `bytearray` values, not %r" % preimage
             )
 
-        return self.hasher(bytes(preimage))
+        return self.hasher(preimage)
 
     def new(self, part):
         if not isinstance(part, (bytes, bytearray)):
@@ -30,7 +30,7 @@ class PreImage:
             raise TypeError(
                 "Can only compute the hash of `bytes` or `bytearray` values, not %r" % part
             )
-        self.preimage_parts.append(bytes(part))
+        self.preimage_parts.append(part)
 
     def digest(self):
         return self.keccak_fn(b''.join(self.preimage_parts))
