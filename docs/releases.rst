@@ -1,13 +1,29 @@
 Release Notes
 =============
 
+v0.1.2
+--------------
+
+Released Apr 2, 2018
+
+- You can now import eth-hash without a backend, it won't fail until trying to generate a hash
+
+v0.1.1
+--------------
+
+Released Mar 15, 2018
+
+- upgrade pycryptodome to v3.5.1+
+- performance improvements with preimage
+- Better docs and tests
+
 v0.1.0
 --------------
 
 Released Feb 28, 2018
 
 - Add support for :class:`bytearray` input to keccak
-- Add support for incrementally buildng hash results
+- Add support for incrementally building hash results
 
 v0.1.0-alpha.3
 --------------
