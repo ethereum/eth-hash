@@ -1,8 +1,9 @@
-from eth_hash.preimage import (
-    BasePreImage,
-)
 from sha3 import (
     keccak_256 as _keccak_256,
+)
+
+from eth_hash.preimage import (
+    BasePreImage,
 )
 
 

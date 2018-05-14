@@ -1,6 +1,7 @@
 from Crypto.Hash import (
     keccak,
 )
+
 from eth_hash.preimage import (
     BasePreImage,
 )
