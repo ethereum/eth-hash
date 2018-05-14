@@ -1,6 +1,13 @@
 Release Notes
 =============
 
+v0.1.3
+--------------
+
+Released May 14, 2018
+
+- The pycryptodome backend now allows ``update()``, then ``digest()``, then ``update()``.
+
 v0.1.2
 --------------
 
