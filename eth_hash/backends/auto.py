@@ -4,13 +4,22 @@ from eth_hash.utils import (
 
 
 class AutoBackend:
-    _backend = None
+    _keccak256 = None
+    _preimage = None
+
+    def _initialize(self):
+        backend = auto_choose_backend()
+        self._keccak256 = backend.keccak256
+        self._preimage = backend.preimage
 
     @property
-    def backend(self):
-        if self._backend is None:
-            self._backend = auto_choose_backend()
-        return self._backend
+    def keccak256(self):
+        if self._keccak256 is None:
+            self._initialize()
+        return self._keccak256
 
-    def __getattr__(self, attr):
-        return getattr(self.backend, attr)
+    @property
+    def preimage(self):
+        if self._preimage is None:
+            self._initialize()
+        return self._preimage
