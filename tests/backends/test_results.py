@@ -1,3 +1,4 @@
+import pickle
 import pytest
 
 # Note that this file is symlink'd in all backend folders, so a change here is
@@ -88,3 +89,10 @@ def test_update_digest_update(keccak):
     assert preimage.digest() == b"\xc30[\xc9\xde\x12D\xe4\x80P\x96,\xedP\xb7Y4\xc3p\x06\xe9\x9e\x8bzb!>\x94\\=\xfc\xd7"  # noqa: E501
     preimage.update(b'tsra')
     assert preimage.digest() == b"\xb1\xf3T\xb2\x8f\xf2\x84R\xd6\xb9\xd6\x1fA\x06\x1b\xbe\x82\xbe\xb1\xfc\x98\xf33d\xa8\x05\x8d\x1a]\x16M\x05"  # noqa: E501
+
+
+def test_auto_pickleable(keccak_auto):
+    serialized = pickle.dumps(keccak_auto)
+    deserialized = pickle.loads(serialized)
+
+    assert deserialized(b'arst') == keccak_auto(b'arst')
