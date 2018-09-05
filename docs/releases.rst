@@ -1,6 +1,22 @@
 Release Notes
 =============
 
+v0.1.5
+--------------
+
+Released September 5, 2018
+
+- set `pycryptodome` version to `>=3.6.6,<4` to fix a recently discovered vulnerability
+
+v0.1.4
+--------------
+
+Released May 28, 2018
+
+- Ensure the auto backend is pickleable (#19)
+
+
+
 v0.1.3
 --------------
 
