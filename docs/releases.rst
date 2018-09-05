@@ -1,7 +1,7 @@
 Release Notes
 =============
 
-v0.1.5
+v0.2.0
 --------------
 
 Released September 5, 2018
