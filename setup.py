@@ -54,12 +54,12 @@ setup(
     name='eth-hash',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
     version='0.2.0',
-    description="""<PYPI_NAME>: <SHORT_DESCRIPTION>""",
+    description="""eth-hash: The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3""",
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='The Ethereum Foundation',
     author_email='snakecharmers@ethereum.org',
-    url='https://github.com/ethereum/<REPO_NAME>',
+    url='https://github.com/ethereum/eth-hash',
     include_package_data=True,
     install_requires=[
         "eth-utils>=1,<2",
@@ -71,7 +71,7 @@ setup(
     zip_safe=False,
     keywords='ethereum',
     packages=find_packages(exclude=["tests", "tests.*"]),
-    package_data={'<MODULE_NAME>': ['py.typed']},
+    package_data={'eth_hash': ['py.typed']},
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

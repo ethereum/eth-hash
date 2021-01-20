@@ -11,7 +11,7 @@ Contents
 
     quickstart
     eth_hash.backends
-    <MODULE_NAME>
+    eth_hash
     release_notes
 
 

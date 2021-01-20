@@ -54,7 +54,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = '<PROJECT_NAME>'
+project = 'eth-hash'
 copyright = '2020, The Ethereum Foundation'
 
 __version__ = setup_version
@@ -240,7 +240,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', '<MODULE_NAME>', '<PROJECT_NAME> Documentation',
+    ('index', 'eth_hash', 'eth-hash Documentation',
      ['The Ethereum Foundation'], 1)
 ]
 
@@ -254,8 +254,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', '<PROJECT_NAME>', '<PROJECT_NAME> Documentation',
-   'The Ethereum Foundation', '<PROJECT_NAME>', '<SHORT_DESCRIPTION>',
+  ('index', 'eth-hash', 'eth-hash Documentation',
+   'The Ethereum Foundation', 'eth-hash', 'The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3',
    'Miscellaneous'),
 ]
 

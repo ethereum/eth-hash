@@ -1,10 +1,10 @@
 # eth-hash
 
 [![Join the chat at https://gitter.im/ethereum/web3.py](https://badges.gitter.im/ethereum/web3.py.svg)](https://gitter.im/ethereum/web3.py?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://circleci.com/gh/ethereum/<REPO_NAME>.svg?style=shield)](https://circleci.com/gh/ethereum/<REPO_NAME>)
-[![PyPI version](https://badge.fury.io/py/<PYPI_NAME>.svg)](https://badge.fury.io/py/<PYPI_NAME>)
-[![Python versions](https://img.shields.io/pypi/pyversions/<PYPI_NAME>.svg)](https://pypi.python.org/pypi/<PYPI_NAME>)
-[![Docs build](https://readthedocs.org/projects/<RTD_NAME>/badge/?version=latest)](http://<RTD_NAME>.readthedocs.io/en/latest/?badge=latest)
+[![Build Status](https://circleci.com/gh/ethereum/eth-hash.svg?style=shield)](https://circleci.com/gh/ethereum/eth-hash)
+[![PyPI version](https://badge.fury.io/py/eth-hash.svg)](https://badge.fury.io/py/eth-hash)
+[![Python versions](https://img.shields.io/pypi/pyversions/eth-hash.svg)](https://pypi.python.org/pypi/eth-hash)
+[![Docs build](https://readthedocs.org/projects/eth-hash/badge/?version=latest)](http://eth-hash.readthedocs.io/en/latest/?badge=latest)
    
 
 The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3
@@ -17,7 +17,7 @@ If you're looking for a convenient hashing tool, check out
 [`eth_utils.keccak()`](https://eth-utils.readthedocs.io/en/stable/utilities.html#keccak-bytes-int-bool-text-str-hexstr-str-bytes)
 which will be a little friendlier, and provide access to other helpful utilities.
 
-Read more in the [documentation on ReadTheDocs](https://<RTD_NAME>.readthedocs.io/). [View the change log](https://<RTD_NAME>.readthedocs.io/en/latest/release_notes.html).
+Read more in the [documentation on ReadTheDocs](https://eth-hash.readthedocs.io/). [View the change log](https://eth-hash.readthedocs.io/en/latest/release_notes.html).
 
 
 ## Quickstart
@@ -37,7 +37,7 @@ for more about choosing and installing backends.
 
 ## Developer Setup
 
-If you would like to hack on <REPO_NAME>, please check out the [Snake Charmers
+If you would like to hack on eth-hash, please check out the [Snake Charmers
 Tactical Manual](https://github.com/ethereum/snake-charmers-tactical-manual)
 for information on how we do:
 
@@ -51,8 +51,8 @@ for information on how we do:
 You can set up your dev environment with:
 
 ```sh
-git clone git@github.com:ethereum/<REPO_NAME>.git
-cd <REPO_NAME>
+git clone git@github.com:ethereum/eth-hash.git
+cd eth-hash
 virtualenv -p python3 venv
 . venv/bin/activate
 pip install -e .[dev]
