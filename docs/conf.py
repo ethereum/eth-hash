@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'eth-hash'
-copyright = '2018, Jason Carver, Piper Merriam'
+copyright = '2020, The Ethereum Foundation'
 
 __version__ = setup_version
 # The version info for the project you're documenting, acts as replacement for
@@ -241,7 +241,7 @@ latex_documents = [
 # (source start file, name, description, authors, manual section).
 man_pages = [
     ('index', 'eth_hash', 'eth-hash Documentation',
-     ['Jason Carver'], 1)
+     ['The Ethereum Foundation'], 1)
 ]
 
 # If true, show URL addresses after external links.
@@ -255,7 +255,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'eth-hash', 'eth-hash Documentation',
-   'Jason Carver', 'eth-hash', 'The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3',
+   'The Ethereum Foundation', 'eth-hash', 'The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3',
    'Miscellaneous'),
 ]
 
@@ -274,7 +274,7 @@ texinfo_documents = [
 # -- Intersphinx configuration ------------------------------------------------
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.5', None),
+    'python': ('https://docs.python.org/3.6', None),
 }
 
 # -- Doctest configuration ----------------------------------------

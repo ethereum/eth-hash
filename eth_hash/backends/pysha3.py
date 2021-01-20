@@ -1,29 +1,42 @@
+from typing import (
+    Union,
+)
+
 from sha3 import (
     keccak_256 as _keccak_256,
 )
 
-from eth_hash.preimage import (
-    BasePreImage,
+from eth_hash.abc import (
+    BackendAPI,
+    PreImageAPI,
 )
 
 
-def keccak256(prehash: bytes) -> bytes:
-    return _keccak_256(prehash).digest()
+class Pysha3Preimage(PreImageAPI):
 
-
-class preimage(BasePreImage):
-    _hash = None
-
-    def __init__(self, prehash) -> None:
+    def __init__(self, prehash: bytes) -> None:
         self._hash = _keccak_256(prehash)
 
-    def update(self, prehash) -> None:
-        return self._hash.update(prehash)
+    def update(self, prehash: bytes) -> None:
+        return self._hash.update(prehash)  # type: ignore
 
     def digest(self) -> bytes:
-        return self._hash.digest()
+        return self._hash.digest()  # type: ignore
 
-    def copy(self) -> 'preimage':
-        dup = preimage(b'')
+    def copy(self) -> 'Pysha3Preimage':
+        dup = Pysha3Preimage(b'')
         dup._hash = self._hash.copy()
         return dup
+
+
+class PySha3Backend(BackendAPI):
+    def keccak256(self, prehash: Union[bytearray, bytes]) -> bytes:
+        return _keccak_256(prehash).digest()  # type: ignore
+
+    def preimage(self, prehash: Union[bytearray, bytes]) -> PreImageAPI:
+        return Pysha3Preimage(prehash)
+
+
+backend = PySha3Backend()
+keccak256 = backend.keccak256
+preimage = backend.preimage

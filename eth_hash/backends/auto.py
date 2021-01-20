@@ -1,25 +1,29 @@
+from typing import (
+    Union,
+)
+
+from eth_hash.abc import (
+    BackendAPI,
+    PreImageAPI,
+)
 from eth_hash.utils import (
     auto_choose_backend,
 )
 
 
-class AutoBackend:
-    _keccak256 = None
-    _preimage = None
+class AutoBackend(BackendAPI):
 
-    def _initialize(self):
+    def _initialize(self) -> None:
         backend = auto_choose_backend()
-        self._keccak256 = backend.keccak256
-        self._preimage = backend.preimage
+        # Use setattr to circumvent mypy's confusion, see:
+        # https://github.com/python/mypy/issues/2427
+        setattr(self, 'keccak256', backend.keccak256)
+        setattr(self, 'preimage', backend.preimage)
 
-    @property
-    def keccak256(self):
-        if self._keccak256 is None:
-            self._initialize()
-        return self._keccak256
+    def keccak256(self, in_data: Union[bytearray, bytes]) -> bytes:
+        self._initialize()
+        return self.keccak256(in_data)
 
-    @property
-    def preimage(self):
-        if self._preimage is None:
-            self._initialize()
-        return self._preimage
+    def preimage(self, in_data: Union[bytearray, bytes]) -> PreImageAPI:
+        self._initialize()
+        return self.preimage(in_data)

@@ -1,12 +1,16 @@
 import importlib
+import logging
 import os
 
+from eth_hash.abc import (
+    BackendAPI,
+)
 from eth_hash.backends import (
     SUPPORTED_BACKENDS,
 )
 
 
-def auto_choose_backend():
+def auto_choose_backend() -> BackendAPI:
     env_backend = get_backend_in_environment()
 
     if env_backend:
@@ -15,15 +19,36 @@ def auto_choose_backend():
         return choose_available_backend()
 
 
-def get_backend_in_environment():
-    return os.environ.get('ETH_HASH_BACKEND', None)
+def get_backend_in_environment() -> str:
+    return os.environ.get('ETH_HASH_BACKEND', "")
 
 
-def load_backend(backend_name):
-    return importlib.import_module('eth_hash.backends.%s' % backend_name)
+def load_backend(backend_name: str) -> BackendAPI:
+    import_path = 'eth_hash.backends.%s' % backend_name
+    module = importlib.import_module(import_path)
+
+    try:
+        backend = module.backend  # type: ignore
+    except AttributeError as e:
+        raise ValueError(
+            "Import of %s failed, because %r does not have 'backend' attribute" % (
+                import_path,
+                module,
+            )
+        ) from e
+
+    if isinstance(backend, BackendAPI):
+        return backend
+    else:
+        raise ValueError(
+            "Import of %s failed, because %r is an invalid back end" % (
+                import_path,
+                backend,
+            )
+        )
 
 
-def load_environment_backend(env_backend):
+def load_environment_backend(env_backend: str) -> BackendAPI:
     if env_backend in SUPPORTED_BACKENDS:
         try:
             return load_backend(env_backend)
@@ -31,7 +56,7 @@ def load_environment_backend(env_backend):
             raise ImportError(
                 "The backend specified in ETH_HASH_BACKEND, '{0}', is not installed. "
                 "Install with `pip install eth-hash[{0}]`.".format(env_backend)
-            )
+            ) from e
     else:
         raise ValueError(
             "The backend specified in ETH_HASH_BACKEND, %r, is not supported. "
@@ -39,12 +64,12 @@ def load_environment_backend(env_backend):
         )
 
 
-def choose_available_backend():
+def choose_available_backend() -> BackendAPI:
     for backend in SUPPORTED_BACKENDS:
         try:
             return load_backend(backend)
         except ImportError:
-            pass
+            logging.getLogger('eth_hash').debug("Failed to import %s", backend, exc_info=True)
     raise ImportError(
         "None of these hashing backends are installed: %r.\n"
         "Install with `pip install eth-hash[%s]`." % (
