@@ -14,11 +14,13 @@ class Keccak256:
         self.preimage = self._preimage_first_run
 
     def _hasher_first_run(self, preimage):
-        '''
-        Invoke the backend on-demand, and check an expected hash result,
-        then replace this first run with the new hasher method.
-        This is a bit of a hacky way to minimize overhead on hash calls after this first one.
-        '''
+        """
+        Validate, on first-run, that the hasher backend is valid.
+
+        After first run, replace this with the new hasher method.
+        This is a bit of a hacky way to minimize overhead on hash calls after
+        this first one.
+        """
         new_hasher = self._backend.keccak256
         assert new_hasher(b'') == b"\xc5\xd2F\x01\x86\xf7#<\x92~}\xb2\xdc\xc7\x03\xc0\xe5\x00\xb6S\xca\x82';\x7b\xfa\xd8\x04]\x85\xa4p"  # noqa: E501
         self.hasher = new_hasher
