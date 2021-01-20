@@ -1,0 +1,6 @@
+eth_hash
+eth-hash
+eth-hash
+eth-hash
+eth-hash
+The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3

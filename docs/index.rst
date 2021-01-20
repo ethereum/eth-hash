@@ -10,9 +10,9 @@ Contents
     :maxdepth: 2
 
     quickstart
-    releases
     eth_hash.backends
-    eth_hash
+    <MODULE_NAME>
+    release_notes
 
 
 Indices and tables
