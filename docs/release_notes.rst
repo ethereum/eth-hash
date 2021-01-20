@@ -3,6 +3,21 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.3.0 (2021-01-20)
+----------------------------
+
+Features
+~~~~~~~~
+
+- Export type annotations, for use in importing projects (`#29 <https://github.com/ethereum/eth-hash/issues/29>`__)
+
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Import 3 years worth of template updates (`#29 <https://github.com/ethereum/eth-hash/issues/29>`__)
+
+
 v0.2.0
 --------------
 
