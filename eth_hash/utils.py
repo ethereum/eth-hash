@@ -31,14 +31,20 @@ def load_backend(backend_name: str) -> BackendAPI:
         backend = module.backend  # type: ignore
     except AttributeError as e:
         raise ValueError(
-            f"Import of {import_path} failed, because {module!r} does not have 'backend' attribute"
+            "Import of %s failed, because %r does not have 'backend' attribute" % (
+                import_path,
+                module,
+            )
         ) from e
 
     if isinstance(backend, BackendAPI):
         return backend
     else:
         raise ValueError(
-            f"Import of {import_path} failed, because {backend!r} is an invalid back end"
+            "Import of %s failed, because %r is an invalid back end" % (
+                import_path,
+                backend,
+            )
         )
 
 
