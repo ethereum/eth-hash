@@ -1,8 +1,9 @@
-import pytest
 import sys
 from unittest import (
     mock,
 )
+
+import pytest
 
 
 def clean_module(name):
