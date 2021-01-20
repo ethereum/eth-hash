@@ -1,27 +1,27 @@
-eth\_hash\.backends package
-===========================
+eth\_hash.backends package
+==========================
 
 Submodules
 ----------
 
-eth\_hash\.backends\.auto module
---------------------------------
+eth\_hash.backends.auto module
+------------------------------
 
 .. automodule:: eth_hash.backends.auto
     :members:
     :undoc-members:
     :show-inheritance:
 
-eth\_hash\.backends\.pycryptodome module
-----------------------------------------
+eth\_hash.backends.pycryptodome module
+--------------------------------------
 
 .. automodule:: eth_hash.backends.pycryptodome
     :members:
     :undoc-members:
     :show-inheritance:
 
-eth\_hash\.backends\.pysha3 module
-----------------------------------
+eth\_hash.backends.pysha3 module
+--------------------------------
 
 .. automodule:: eth_hash.backends.pysha3
     :members:
