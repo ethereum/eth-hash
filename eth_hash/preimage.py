@@ -18,5 +18,5 @@ class BasePreImage(metaclass=ABCMeta):
         return self.keccak_fn(b''.join(self.preimage_parts))
 
     @abstractmethod
-    def copy(self) -> 'PreImage':
+    def copy(self) -> 'BasePreImage':
         pass

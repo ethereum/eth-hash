@@ -31,7 +31,7 @@ def load_environment_backend(env_backend):
             raise ImportError(
                 "The backend specified in ETH_HASH_BACKEND, '{0}', is not installed. "
                 "Install with `pip install eth-hash[{0}]`.".format(env_backend)
-            )
+            ) from e
     else:
         raise ValueError(
             "The backend specified in ETH_HASH_BACKEND, %r, is not supported. "
