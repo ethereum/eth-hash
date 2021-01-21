@@ -1,0 +1,1 @@
+Bugfix to export type annotations
