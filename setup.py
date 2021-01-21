@@ -53,7 +53,7 @@ with open('./README.md') as readme:
 setup(
     name='eth-hash',
     # *IMPORTANT*: Don't manually change the version here. Use `make bump`, as described in readme
-    version='0.3.0',
+    version='0.3.1',
     description="""eth-hash: The Ethereum hashing function, keccak256, sometimes (erroneously) called sha3""",
     long_description=long_description,
     long_description_content_type='text/markdown',
