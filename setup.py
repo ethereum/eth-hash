@@ -61,9 +61,6 @@ setup(
     author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-hash',
     include_package_data=True,
-    install_requires=[
-        "eth-utils>=1,<2",
-    ],
     python_requires='>=3.5, <4',
     extras_require=extras_require,
     py_modules=['eth_hash'],
