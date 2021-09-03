@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.3.2 (2021-09-03)
+----------------------------
+
+Miscellaneous changes
+~~~~~~~~~~~~~~~~~~~~~
+
+- Drop eth-utils requirement, to fix dependency cycle (`#33 <https://github.com/ethereum/eth-hash/issues/33>`__)
+
+
 eth-hash v0.3.1 (2021-01-21)
 ----------------------------
 
