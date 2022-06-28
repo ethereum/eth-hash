@@ -22,15 +22,18 @@ class Keccak256:
         This is a bit of a hacky way to minimize overhead on hash calls after
         this first one.
         """
+        # Execute directly before saving method, to let any side-effects settle (see AutoBackend)
+        result = self._backend.keccak256(in_data)
         new_hasher = self._backend.keccak256
         assert new_hasher(b'') == b"\xc5\xd2F\x01\x86\xf7#<\x92~}\xb2\xdc\xc7\x03\xc0\xe5\x00\xb6S\xca\x82';\x7b\xfa\xd8\x04]\x85\xa4p"  # noqa: E501
         self.hasher = new_hasher
-        return new_hasher(in_data)
+        return result
 
     def _preimage_first_run(self, in_data: Union[bytearray, bytes]) -> PreImageAPI:
-        new_preimage = self._backend.preimage
-        self.preimage = new_preimage
-        return new_preimage(in_data)
+        # Execute directly before saving method, to let any side-effects settle (see AutoBackend)
+        result = self._backend.preimage(in_data)
+        self.preimage = self._backend.preimage
+        return result
 
     def __call__(self, preimage: Union[bytearray, bytes]) -> bytes:
         if not isinstance(preimage, (bytearray, bytes)):
