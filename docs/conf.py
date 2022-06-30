@@ -274,7 +274,7 @@ texinfo_documents = [
 # -- Intersphinx configuration ------------------------------------------------
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3.6', None),
+    'python': ('https://docs.python.org/3.7', None),
 }
 
 # -- Doctest configuration ----------------------------------------

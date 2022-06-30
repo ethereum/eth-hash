@@ -39,51 +39,15 @@ jobs:
   docs:
     <<: *common
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/python:3.7
         environment:
           TOXENV: docs
   lint:
     <<: *common
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/python:3.7
         environment:
           TOXENV: lint
-  py35-core:
-    <<: *common
-    docker:
-      - image: circleci/python:3.5
-        environment:
-          TOXENV: py35-core
-  py35-backend-pysha3:
-    <<: *common
-    docker:
-      - image: circleci/python:3.5
-        environment:
-          TOXENV: py35-backend-pysha3
-  py35-backend-pycryptodome:
-    <<: *common
-    docker:
-      - image: circleci/python:3.5
-        environment:
-          TOXENV: py35-backend-pycryptodome
-  py36-core:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-core
-  py36-backend-pysha3:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-backend-pysha3
-  py36-backend-pycryptodome:
-    <<: *common
-    docker:
-      - image: circleci/python:3.6
-        environment:
-          TOXENV: py36-backend-pycryptodome
   py37-core:
     <<: *common
     docker:
@@ -120,12 +84,6 @@ workflows:
     jobs:
       - docs
       - lint
-      - py35-core
-      - py35-backend-pysha3
-      - py35-backend-pycryptodome
-      - py36-core
-      - py36-backend-pysha3
-      - py36-backend-pycryptodome
       - py37-core
       - py37-backend-pysha3
       - py37-backend-pycryptodome
