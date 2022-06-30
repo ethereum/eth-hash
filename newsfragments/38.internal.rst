@@ -1,0 +1,1 @@
+Prune ``venv`` files from the release via MANIFEST.in
