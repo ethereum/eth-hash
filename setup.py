@@ -7,14 +7,14 @@ from setuptools import (
 
 extras_require = {
     'test': [
-        "pytest==5.4.1",
-        "pytest-xdist",
+        "pytest>=6.2.5,<7",
+        "pytest-xdist>=2.4.0,<3",
         "tox==3.14.6",
     ],
     'lint': [
         "flake8==3.7.9",
         "isort>=4.2.15,<5",
-        "mypy==0.770",
+        "mypy==0.910",
         "pydocstyle>=5.0.0,<6",
     ],
     'doc': [
@@ -81,6 +81,7 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
 )

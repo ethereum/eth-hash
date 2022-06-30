@@ -114,6 +114,30 @@ jobs:
       - image: circleci/python:3.9
         environment:
           TOXENV: py39-backend-pycryptodome
+  py310-lint:
+    <<: *common
+    docker:
+      - image: circleci/python:3.10
+        environment:
+          TOXENV: py310-lint
+  py310-core:
+    <<: *common
+    docker:
+      - image: circleci/python:3.10
+        environment:
+          TOXENV: py310-core
+  py310-backend-pysha3:
+    <<: *common
+    docker:
+      - image: circleci/python:3.10
+        environment:
+          TOXENV: py310-backend-pysha3
+  py310-backend-pycryptodome:
+    <<: *common
+    docker:
+      - image: circleci/python:3.10
+        environment:
+          TOXENV: py310-backend-pycryptodome
   pypy3-core:
     <<: *common
     docker:
@@ -143,5 +167,9 @@ workflows:
       - py39-core
       - py39-backend-pysha3
       - py39-backend-pycryptodome
+      - py310-lint
+      - py310-core
+      - py310-backend-pysha3
+      - py310-backend-pycryptodome
       - pypy3-core
       - pypy3-backend-pycryptodome
