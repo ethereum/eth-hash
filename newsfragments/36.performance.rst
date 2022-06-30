@@ -1,1 +1,0 @@
-Keccak backend was initialized every time it was called. Now it's initialized only the first time it's called.

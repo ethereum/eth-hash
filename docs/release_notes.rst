@@ -3,6 +3,23 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.3.3 (2022-06-30)
+----------------------------
+Eth_Hash 0.3.3 (2022-06-30)
+---------------------------
+
+Performance improvements
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Keccak backend was initialized every time it was called. Now it's initialized only the first time it's called. (`#36 <https://github.com/ethereum/eth-hash/issues/36>`__)
+
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Prune ``venv`` files from the release via MANIFEST.in (`#38 <https://github.com/ethereum/eth-hash/issues/38>`__)
+
+
 eth-hash v0.3.2 (2021-09-03)
 ----------------------------
 
