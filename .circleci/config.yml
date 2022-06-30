@@ -39,103 +39,103 @@ jobs:
   docs:
     <<: *common
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.7
         environment:
           TOXENV: docs
   py37-lint:
     <<: *common
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.7
         environment:
           TOXENV: py37-lint
   py37-core:
     <<: *common
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.7
         environment:
           TOXENV: py37-core
   py37-backend-pysha3:
     <<: *common
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.7
         environment:
           TOXENV: py37-backend-pysha3
   py37-backend-pycryptodome:
     <<: *common
     docker:
-      - image: circleci/python:3.7
+      - image: cimg/python:3.7
         environment:
           TOXENV: py37-backend-pycryptodome
   py38-lint:
     <<: *common
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
         environment:
           TOXENV: py38-lint
   py38-core:
     <<: *common
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
         environment:
           TOXENV: py38-core
   py38-backend-pysha3:
     <<: *common
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
         environment:
           TOXENV: py38-backend-pysha3
   py38-backend-pycryptodome:
     <<: *common
     docker:
-      - image: circleci/python:3.8
+      - image: cimg/python:3.8
         environment:
           TOXENV: py38-backend-pycryptodome
   py39-lint:
     <<: *common
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.9
         environment:
           TOXENV: py39-lint
   py39-core:
     <<: *common
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.9
         environment:
           TOXENV: py39-core
   py39-backend-pysha3:
     <<: *common
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.9
         environment:
           TOXENV: py39-backend-pysha3
   py39-backend-pycryptodome:
     <<: *common
     docker:
-      - image: circleci/python:3.9
+      - image: cimg/python:3.9
         environment:
           TOXENV: py39-backend-pycryptodome
   py310-lint:
     <<: *common
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
         environment:
           TOXENV: py310-lint
   py310-core:
     <<: *common
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
         environment:
           TOXENV: py310-core
   py310-backend-pysha3:
     <<: *common
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
         environment:
           TOXENV: py310-backend-pysha3
   py310-backend-pycryptodome:
     <<: *common
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
         environment:
           TOXENV: py310-backend-pycryptodome
   pypy3-core:

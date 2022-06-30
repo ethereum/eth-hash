@@ -9,18 +9,18 @@ extras_require = {
     'test': [
         "pytest>=6.2.5,<7",
         "pytest-xdist>=2.4.0,<3",
-        "tox==3.14.6",
+        "tox>=3.14.6,<4",
     ],
     'lint': [
         "flake8==3.7.9",
         "isort>=4.2.15,<5",
-        "mypy==0.910",
+        "mypy==0.961",
         "pydocstyle>=5.0.0,<6",
     ],
     'doc': [
-        "Sphinx>=1.6.5,<2",
+        "Sphinx>=5.0.0,<6",
         "sphinx_rtd_theme>=0.1.9,<1",
-        "towncrier>=19.2.0, <20",
+        "towncrier>=21,<22",
         "jinja2>=3.0.0,<3.1.0",  # jinja2<3.0 or >=3.1.0 cause doc build failures.
     ],
     'dev': [
