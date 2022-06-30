@@ -28,7 +28,7 @@ def load_backend(backend_name: str) -> BackendAPI:
     module = importlib.import_module(import_path)
 
     try:
-        backend = module.backend  # type: ignore
+        backend = module.backend
     except AttributeError as e:
         raise ValueError(
             "Import of %s failed, because %r does not have 'backend' attribute" % (
