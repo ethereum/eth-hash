@@ -21,6 +21,7 @@ extras_require = {
         "Sphinx>=1.6.5,<2",
         "sphinx_rtd_theme>=0.1.9,<1",
         "towncrier>=19.2.0, <20",
+        "jinja2>=3.0.0,<3.1.0",  # jinja2<3.0 or >=3.1.0 cause doc build failures.
     ],
     'dev': [
         "bumpversion>=0.5.3,<1",
@@ -61,7 +62,7 @@ setup(
     author_email='snakecharmers@ethereum.org',
     url='https://github.com/ethereum/eth-hash',
     include_package_data=True,
-    python_requires='>=3.6, <4',
+    python_requires='>=3.7, <4',
     extras_require=extras_require,
     py_modules=['eth_hash'],
     license="MIT",
@@ -77,7 +78,6 @@ setup(
         'Operating System :: MacOS',
         'Operating System :: POSIX',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: Implementation :: PyPy',
     ],
