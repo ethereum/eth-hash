@@ -13,7 +13,6 @@ from eth_hash.abc import (
 
 
 class Pysha3Preimage(PreImageAPI):
-
     def __init__(self, prehash: bytes) -> None:
         self._hash = _keccak_256(prehash)
 
@@ -23,8 +22,8 @@ class Pysha3Preimage(PreImageAPI):
     def digest(self) -> bytes:
         return self._hash.digest()  # type: ignore
 
-    def copy(self) -> 'Pysha3Preimage':
-        dup = Pysha3Preimage(b'')
+    def copy(self) -> "Pysha3Preimage":
+        dup = Pysha3Preimage(b"")
         dup._hash = self._hash.copy()
         return dup
 

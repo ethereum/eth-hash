@@ -13,7 +13,6 @@ from eth_hash.abc import (
 
 
 class CryptodomePreimage(PreImageAPI):
-
     def __init__(self, prehash: bytes) -> None:
         self._hash = keccak.new(data=prehash, digest_bits=256, update_after_digest=True)
         # pycryptodome doesn't expose a `copy` mechanism for it's hash objects
@@ -28,8 +27,8 @@ class CryptodomePreimage(PreImageAPI):
     def digest(self) -> bytes:
         return self._hash.digest()
 
-    def copy(self) -> 'CryptodomePreimage':
-        return CryptodomePreimage(b''.join(self._parts))
+    def copy(self) -> "CryptodomePreimage":
+        return CryptodomePreimage(b"".join(self._parts))
 
 
 class CryptodomeBackend(BackendAPI):

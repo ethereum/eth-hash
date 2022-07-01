@@ -21,7 +21,7 @@ class PreImageAPI(ABC):
         ...
 
     @abstractmethod
-    def copy(self) -> 'PreImageAPI':
+    def copy(self) -> "PreImageAPI":
         ...
 
 
