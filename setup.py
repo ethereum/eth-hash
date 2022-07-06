@@ -16,6 +16,7 @@ extras_require = {
         "isort>=4.2.15,<5",
         "mypy==0.961",
         "pydocstyle>=5.0.0,<6",
+        "black>=22.0,<23",
     ],
     'doc': [
         "Sphinx>=5.0.0,<6",
