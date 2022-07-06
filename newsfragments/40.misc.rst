@@ -1,1 +1,0 @@
-Pull in updates from ethereum-python-project-template: Update testing/linting dependencies, circleci updates, add new ``make validate-docs`` command
