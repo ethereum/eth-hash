@@ -1,1 +1,0 @@
-Prefer pysha3 backend by default

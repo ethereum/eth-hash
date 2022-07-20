@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.5.0 (2022-07-20)
+----------------------------
+
+Performance improvements
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Prefer pysha3 backend by default (`#42 <https://github.com/ethereum/eth-hash/issues/42>`__)
+
+
 eth-hash v0.4.0 (2022-07-06)
 ----------------------------
 
