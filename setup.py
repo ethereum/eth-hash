@@ -36,7 +36,8 @@ extras_require = {
         "pycryptodome>=3.6.6,<4",
     ],
     'pysha3': [
-        "pysha3>=1.0.0,<2.0.0",
+        "pysha3>=1.0.0,<2.0.0;python_version<'3.9'",
+        "safe-pysha3>=1.0.0;python_version>='3.9'",
     ],
 }
 

@@ -9,6 +9,6 @@ See :ref:`Choose a hashing backend` for more.
 """
 
 SUPPORTED_BACKENDS = [
-    "pysha3",
     "pycryptodome",
+    "pysha3",
 ]
