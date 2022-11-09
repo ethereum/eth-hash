@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.5.1 (2022-11-09)
+----------------------------
+
+Features
+~~~~~~~~
+
+- Add support for Python 3.11 (`#45 <https://github.com/ethereum/eth-hash/issues/45>`__)
+
+
 eth-hash v0.5.0 (2022-07-20)
 ----------------------------
 
