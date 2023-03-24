@@ -39,6 +39,7 @@ extensions = [
     "sphinx.ext.autosectionlabel",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
+    "sphinx_rtd_theme",
 ]
 
 suppress_warnings = ["autosectionlabel.*"]
