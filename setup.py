@@ -11,11 +11,12 @@ extras_require = {
         "pytest-xdist>=2.4.0",
     ],
     "lint": [
-        "flake8==3.7.9",
-        "isort>=4.2.15,<5",
-        "mypy==0.961",
-        "pydocstyle>=5.0.0,<6",
-        "black>=22.0,<23",
+        "flake8==6.0.0",  # flake8 claims semver but adds new warnings at minor releases, leave it pinned.
+        "flake8-bugbear==23.3.23",  # flake8-bugbear does not follow semver, leave it pinned.
+        "isort>=5.10.1",
+        "mypy==0.971",
+        "pydocstyle>=6.0.0",
+        "black>=23",
     ],
     "doc": [
         "sphinx>=5.0.0",
