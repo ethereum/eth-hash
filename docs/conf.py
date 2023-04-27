@@ -213,8 +213,8 @@ latex_elements = {
 latex_documents = [
     (
         "index",
-        "<MODULE_NAME>.tex",
-        "<PROJECT_NAME> Documentation",
+        "eth_hash.tex",
+        "eth-hash Documentation",
         "The Ethereum Foundation",
         "manual",
     ),
@@ -248,8 +248,8 @@ latex_documents = [
 man_pages = [
     (
         "index",
-        "<MODULE_NAME>",
-        "<PROJECT_NAME> Documentation",
+        "eth_hash",
+        "eth-hash Documentation",
         ["The Ethereum Foundation"],
         1,
     )

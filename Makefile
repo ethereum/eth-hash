@@ -30,8 +30,8 @@ lint:
 	tox run -e lint
 
 lint-roll:
-	isort <MODULE_NAME> tests
-	black <MODULE_NAME> tests setup.py
+	isort eth_hash tests
+	black eth_hash tests setup.py
 	$(MAKE) lint
 
 test:
