@@ -8,7 +8,6 @@ help:
 	@echo "lint - check style with flake8"
 	@echo "lint-roll - automatically fix problems with isort, flake8, etc"
 	@echo "test - run tests quickly with the default Python"
-	@echo "testall - run tests on every Python version with tox"
 	@echo "docs - generate docs and open in browser (linux-docs for version on linux)"
 	@echo "notes - consume towncrier newsfragments/ and update release notes in docs/"
 	@echo "release - package and upload a release (does not run notes target)"
@@ -28,21 +27,15 @@ clean-pyc:
 	find . -name '__pycache__' -exec rm -rf {} +
 
 lint:
-	tox -elint
+	tox run -e lint
 
 lint-roll:
-	isort --recursive eth_hash tests
+	isort eth_hash tests
+	black eth_hash tests setup.py
 	$(MAKE) lint
 
 test:
 	pytest tests
-
-test-all:
-	tox
-
-validate-docs: build-docs
-	./newsfragments/validate_files.py
-	towncrier build --draft --version preview
 
 build-docs:
 	rm docs/eth_hash.backends.rst
@@ -51,10 +44,16 @@ build-docs:
 	$(MAKE) -C docs html
 	$(MAKE) -C docs doctest
 
-docs: build-docs validate-docs
+validate-docs:
+	python ./newsfragments/validate_files.py
+	towncrier build --draft --version preview
+
+check-docs: build-docs validate-docs
+
+docs: check-docs
 	open docs/_build/html/index.html
 
-linux-docs: build-docs
+linux-docs: check-docs
 	xdg-open docs/_build/html/index.html
 
 check-bump:
@@ -81,11 +80,11 @@ release: check-bump clean
 	git config commit.gpgSign true
 	bumpversion $(bump)
 	git push upstream && git push upstream --tags
-	python setup.py sdist bdist_wheel
+	python -m build
 	twine upload dist/*
 	git config commit.gpgSign "$(CURRENT_SIGN_SETTING)"
 
 
 dist: clean
-	python setup.py sdist bdist_wheel
+	python -m build
 	ls -l dist

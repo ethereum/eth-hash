@@ -22,7 +22,9 @@ def test_import_auto():
 
 def test_import_auto_empty_crash(monkeypatch):
     clean_module("eth_hash.auto")
-    from eth_hash.auto import keccak
+    from eth_hash.auto import (
+        keccak,
+    )
 
     with mock.patch.dict("sys.modules", {"sha3": None, "Crypto.Hash": None}):
         with pytest.raises(
@@ -45,7 +47,9 @@ def test_import():
 )
 def test_load_by_env(monkeypatch, backend):
     clean_module("eth_hash.auto")
-    from eth_hash.auto import keccak
+    from eth_hash.auto import (
+        keccak,
+    )
 
     monkeypatch.setenv("ETH_HASH_BACKEND", backend)
     with mock.patch.dict("sys.modules", {"sha3": None, "Crypto.Hash": None}):
@@ -60,7 +64,9 @@ def test_load_by_env(monkeypatch, backend):
 
 def test_load_unavailable_backend_by_env(monkeypatch):
     clean_module("eth_hash.auto")
-    from eth_hash.auto import keccak
+    from eth_hash.auto import (
+        keccak,
+    )
 
     backend = "this-backend-will-never-exist"
     monkeypatch.setenv("ETH_HASH_BACKEND", backend)

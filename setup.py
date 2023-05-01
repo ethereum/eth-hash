@@ -7,25 +7,27 @@ from setuptools import (
 
 extras_require = {
     "test": [
-        "pytest>=6.2.5,<7",
-        "pytest-xdist>=2.4.0,<3",
-        "tox>=3.14.6,<4",
+        "pytest>=7.0.0",
+        "pytest-xdist>=2.4.0",
     ],
     "lint": [
-        "flake8==3.7.9",
-        "isort>=4.2.15,<5",
-        "mypy==0.961",
-        "pydocstyle>=5.0.0,<6",
-        "black>=22.0,<23",
+        "flake8==6.0.0",  # flake8 claims semver but adds new warnings at minor releases, leave it pinned.
+        "flake8-bugbear==23.3.23",  # flake8-bugbear does not follow semver, leave it pinned.
+        "isort>=5.10.1",
+        "mypy==0.971",
+        "pydocstyle>=6.0.0",
+        "black>=23",
     ],
     "doc": [
-        "Sphinx>=5.0.0",
+        "sphinx>=5.0.0",
         "sphinx_rtd_theme>=1.0.0",
         "towncrier>=21,<22",
     ],
     "dev": [
-        "bumpversion>=0.5.3,<1",
-        "pytest-watch>=4.1.0,<5",
+        "bumpversion>=0.5.3",
+        "pytest-watch>=4.1.0",
+        "tox>=4.0.0",
+        "build>=0.9.0",
         "wheel",
         "twine",
         "ipython",
@@ -76,14 +78,11 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
-        "Operating System :: MacOS",
-        "Operating System :: POSIX",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        "Programming Language :: Python :: Implementation :: PyPy",
     ],
 )
