@@ -16,8 +16,8 @@ class AutoBackend(BackendAPI):
         backend = auto_choose_backend()
         # Use setattr to circumvent mypy's confusion, see:
         # https://github.com/python/mypy/issues/2427
-        setattr(self, "keccak256", backend.keccak256)
-        setattr(self, "preimage", backend.preimage)
+        setattr(self, "keccak256", backend.keccak256)  # noqa: B010
+        setattr(self, "preimage", backend.preimage)  # noqa: B010
 
     def keccak256(self, in_data: Union[bytearray, bytes]) -> bytes:
         self._initialize()

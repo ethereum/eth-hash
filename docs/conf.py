@@ -36,10 +36,10 @@ with open(os.path.join(DIR, "../setup.py"), "r") as f:
 # ones.
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.autosectionlabel",
     "sphinx.ext.doctest",
     "sphinx.ext.intersphinx",
     "sphinx_rtd_theme",
+    "sphinx.ext.autosectionlabel",
 ]
 
 suppress_warnings = ["autosectionlabel.*"]
@@ -58,7 +58,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "eth-hash"
-copyright = "2020, The Ethereum Foundation"
+copyright = "2018-2023, The Ethereum Foundation"
 
 __version__ = setup_version
 # The version info for the project you're documenting, acts as replacement for
@@ -144,7 +144,7 @@ html_theme = "sphinx_rtd_theme"
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ["_static"]
+# html_static_path = ["_static"]
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
@@ -211,7 +211,13 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ("index", "eth_hash.tex", "eth-hash Documentation", "Jason Carver", "manual"),
+    (
+        "index",
+        "eth_hash.tex",
+        "eth-hash Documentation",
+        "The Ethereum Foundation",
+        "manual",
+    ),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -240,7 +246,13 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ("index", "eth_hash", "eth-hash Documentation", ["The Ethereum Foundation"], 1)
+    (
+        "index",
+        "eth_hash",
+        "eth-hash Documentation",
+        ["The Ethereum Foundation"],
+        1,
+    )
 ]
 
 # If true, show URL addresses after external links.
@@ -279,7 +291,7 @@ texinfo_documents = [
 # -- Intersphinx configuration ------------------------------------------------
 
 intersphinx_mapping = {
-    "python": ("https://docs.python.org/3.7", None),
+    "python": ("https://docs.python.org/3.10", None),
 }
 
 # -- Doctest configuration ----------------------------------------
