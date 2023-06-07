@@ -3,6 +3,16 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.5.2 (2023-06-07)
+----------------------------
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- remove unused docs deps, bump version of remaining (`#48 <https://github.com/ethereum/eth-hash/issues/48>`__)
+- merge updates from the python project template (`#51 <https://github.com/ethereum/eth-hash/issues/51>`__)
+
+
 eth-hash v0.5.1 (2022-11-09)
 ----------------------------
 
