@@ -56,8 +56,8 @@ def test_load_by_env(monkeypatch, backend):
         with pytest.raises(ImportError) as excinfo:
             keccak(b"triggered")
     expected_msg = (
-        "The backend specified in ETH_HASH_BACKEND, '{0}', is not installed. "
-        "Install with `pip install eth-hash[{0}]`.".format(backend)
+        f"The backend specified in ETH_HASH_BACKEND, '{backend}', is not installed. "
+        f'Install with `python -m pip install "eth-hash[{backend}]"`.'
     )
     assert expected_msg in str(excinfo.value)
 
@@ -73,7 +73,7 @@ def test_load_unavailable_backend_by_env(monkeypatch):
     with pytest.raises(ValueError) as excinfo:
         keccak(b"triggered")
     expected_msg = (
-        "The backend specified in ETH_HASH_BACKEND, '{0}', is not supported. "
-        "Choose one of".format(backend)
+        f"The backend specified in ETH_HASH_BACKEND, '{backend}', is not supported. "
+        "Choose one of"
     )
     assert expected_msg in str(excinfo.value)

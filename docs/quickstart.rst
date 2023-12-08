@@ -15,7 +15,7 @@ Put the backend you would like to use in brackets during install, like:
 
 .. code-block:: shell
 
-  pip install eth-hash[pycryptodome]
+  python -m pip install "eth-hash[pycryptodome]"
 
 Compute a Keccak256 Hash
 -----------------------------

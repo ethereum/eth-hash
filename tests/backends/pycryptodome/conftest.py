@@ -22,6 +22,4 @@ def keccak(monkeypatch, request, keccak_auto):
 
         return keccak
     else:
-        raise AssertionError(
-            "Unrecognized approach to import keccak: %s" % request.param
-        )
+        raise AssertionError(f"Unrecognized approach to import keccak: {request.param}")

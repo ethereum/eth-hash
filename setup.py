@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 from setuptools import (
     find_packages,
     setup,
@@ -37,7 +36,6 @@ extras_require = {
 extras_require["dev"] = (
     extras_require["dev"] + extras_require["docs"] + extras_require["test"]
 )
-
 
 with open("./README.md") as readme:
     long_description = readme.read()

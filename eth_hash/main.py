@@ -43,8 +43,8 @@ class Keccak256:
     def __call__(self, preimage: Union[bytearray, bytes]) -> bytes:
         if not isinstance(preimage, (bytearray, bytes)):
             raise TypeError(
-                "Can only compute the hash of `bytes` or `bytearray` values, not %r"
-                % preimage
+                "Can only compute the hash of `bytes` or `bytearray` values, "
+                f"not {repr(preimage)}"
             )
 
         return self.hasher(preimage)
@@ -52,7 +52,7 @@ class Keccak256:
     def new(self, preimage: Union[bytearray, bytes]) -> PreImageAPI:
         if not isinstance(preimage, (bytearray, bytes)):
             raise TypeError(
-                "Can only compute the hash of `bytes` or `bytearray` values, not %r"
-                % preimage
+                "Can only compute the hash of `bytes` or `bytearray` values, "
+                f"not {repr(preimage)}"
             )
         return self.preimage(preimage)

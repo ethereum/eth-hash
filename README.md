@@ -18,7 +18,6 @@ which will be a little friendlier, and provide access to other helpful utilities
 
 Read more in the [documentation on ReadTheDocs](https://eth-hash.readthedocs.io/). [View the change log](https://eth-hash.readthedocs.io/en/latest/release_notes.html).
 
-
 ## Quickstart
 
 ```sh
