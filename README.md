@@ -42,8 +42,12 @@ for information on how we do:
 
 - Testing
 - Pull Requests
-- Code Style
 - Documentation
+
+We use [pre-commit](https://pre-commit.com/) to maintain consistent code style. Once
+installed, it will run automatically with every commit. You can also run it manually
+with `make lint`. If you need to make a commit that skips the `pre-commit` checks, you
+can do so with `git commit --no-verify`.
 
 ### Development Environment Setup
 
@@ -55,6 +59,7 @@ cd eth-hash
 python -m virtualenv venv
 . venv/bin/activate
 python -m pip install -e ".[dev]"
+pre-commit install
 ```
 
 ### Release setup
