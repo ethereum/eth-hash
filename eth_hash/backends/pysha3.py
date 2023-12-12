@@ -3,7 +3,7 @@ from typing import (
 )
 
 from sha3 import (
-    keccak_256 as _keccak_256,
+    keccak_256 as _keccak_256,z
 )
 
 from eth_hash.abc import (
@@ -20,7 +20,7 @@ class Pysha3Preimage(PreImageAPI):
         return self._hash.update(prehash)  # type: ignore
 
     def digest(self) -> bytes:
-        return self._hash.digest()  # type: ignore
+        return self._hash.digest()  # type: ignore    
 
     def copy(self) -> "Pysha3Preimage":
         dup = Pysha3Preimage(b"")
