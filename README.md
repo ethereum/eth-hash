@@ -18,7 +18,6 @@ which will be a little friendlier, and provide access to other helpful utilities
 
 Read more in the [documentation on ReadTheDocs](https://eth-hash.readthedocs.io/). [View the change log](https://eth-hash.readthedocs.io/en/latest/release_notes.html).
 
-
 ## Quickstart
 
 ```sh
@@ -42,8 +41,12 @@ for information on how we do:
 
 - Testing
 - Pull Requests
-- Code Style
 - Documentation
+
+We use [pre-commit](https://pre-commit.com/) to maintain consistent code style. Once
+installed, it will run automatically with every commit. You can also run it manually
+with `make lint`. If you need to make a commit that skips the `pre-commit` checks, you
+can do so with `git commit --no-verify`.
 
 ### Development Environment Setup
 
@@ -55,6 +58,7 @@ cd eth-hash
 python -m virtualenv venv
 . venv/bin/activate
 python -m pip install -e ".[dev]"
+pre-commit install
 ```
 
 ### Release setup

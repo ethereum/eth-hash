@@ -24,29 +24,22 @@ def get_backend_in_environment() -> str:
 
 
 def load_backend(backend_name: str) -> BackendAPI:
-    import_path = "eth_hash.backends.%s" % backend_name
+    import_path = f"eth_hash.backends.{backend_name}"
     module = importlib.import_module(import_path)
 
     try:
         backend = module.backend
     except AttributeError as e:
         raise ValueError(
-            "Import of %s failed, because %r does not have 'backend' attribute"
-            % (
-                import_path,
-                module,
-            )
+            f"Import of {import_path} failed, because {module} does not have "
+            "'backend' attribute"
         ) from e
 
     if isinstance(backend, BackendAPI):
         return backend
     else:
         raise ValueError(
-            "Import of %s failed, because %r is an invalid back end"
-            % (
-                import_path,
-                backend,
-            )
+            f"Import of {import_path} failed, because {backend} is an invalid back end"
         )
 
 
@@ -56,13 +49,14 @@ def load_environment_backend(env_backend: str) -> BackendAPI:
             return load_backend(env_backend)
         except ImportError as e:
             raise ImportError(
-                "The backend specified in ETH_HASH_BACKEND, '{0}', is not installed. "
-                "Install with `pip install eth-hash[{0}]`.".format(env_backend)
+                f"The backend specified in ETH_HASH_BACKEND, '{env_backend}', is not "
+                f"installed. Install with `python -m pip install "
+                f'"eth-hash[{env_backend}]"`.'
             ) from e
     else:
         raise ValueError(
-            "The backend specified in ETH_HASH_BACKEND, %r, is not supported. "
-            "Choose one of: %r" % (env_backend, SUPPORTED_BACKENDS)
+            f"The backend specified in ETH_HASH_BACKEND, '{env_backend}', is not "
+            f"supported. Choose one of: {SUPPORTED_BACKENDS}"
         )
 
 
@@ -72,13 +66,9 @@ def choose_available_backend() -> BackendAPI:
             return load_backend(backend)
         except ImportError:
             logging.getLogger("eth_hash").debug(
-                "Failed to import %s", backend, exc_info=True
+                f"Failed to import {backend}", exc_info=True
             )
     raise ImportError(
-        "None of these hashing backends are installed: %r.\n"
-        "Install with `pip install eth-hash[%s]`."
-        % (
-            SUPPORTED_BACKENDS,
-            SUPPORTED_BACKENDS[0],
-        )
+        f"None of these hashing backends are installed: {SUPPORTED_BACKENDS}.\n"
+        f'Install with `python -m pip install "eth-hash[{SUPPORTED_BACKENDS[0]}]"`.'
     )
