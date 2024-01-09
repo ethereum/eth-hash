@@ -35,7 +35,9 @@ def test_import_auto_empty_crash(monkeypatch):
 
 def test_import():
     clean_module("eth_hash")
-    import eth_hash  # noqa: F401
+    import eth_hash
+
+    assert isinstance(eth_hash.__version__, str)
 
 
 @pytest.mark.parametrize(
