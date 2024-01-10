@@ -1,1 +1,0 @@
-Correct booleans in ``pyproject.toml`` and add test for presence of ``eth_hash.__version__`` attribute

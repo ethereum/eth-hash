@@ -3,6 +3,22 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.6.0 (2024-01-10)
+----------------------------
+
+Breaking Changes
+~~~~~~~~~~~~~~~~
+
+- Drop python 3.7 support (`#53 <https://github.com/ethereum/eth-hash/issues/53>`__)
+
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge project template updates, notably use ``pre-commit`` for linting and change the name of ``master`` branch to ``main`` (`#53 <https://github.com/ethereum/eth-hash/issues/53>`__)
+- Correct booleans in ``pyproject.toml`` and add test for presence of ``eth_hash.__version__`` attribute (`#55 <https://github.com/ethereum/eth-hash/issues/55>`__)
+
+
 eth-hash v0.5.2 (2023-06-07)
 ----------------------------
 
