@@ -33,7 +33,7 @@ def test_import_auto_empty_crash(monkeypatch):
             keccak(b"eh")
 
 
-def test_import():
+def test_import_and_version():
     clean_module("eth_hash")
     import eth_hash
 
