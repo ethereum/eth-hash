@@ -40,11 +40,17 @@ build-docs:
 	$(MAKE) -C docs html
 	$(MAKE) -C docs doctest
 
-validate-docs:
+build-docs-ci:
+	$(MAKE) -C docs latexpdf
+	$(MAKE) -C docs epub
+
+validate-newsfragments:
 	python ./newsfragments/validate_files.py
 	towncrier build --draft --version preview
 
-check-docs: build-docs validate-docs
+check-docs: build-docs validate-newsfragments
+
+check-docs-ci: build-docs build-docs-ci validate-newsfragments
 
 docs: check-docs
 	open docs/_build/html/index.html
