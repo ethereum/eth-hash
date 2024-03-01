@@ -3,6 +3,15 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.7.0 (2024-03-01)
+----------------------------
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge template updates, notably adding py312 support and testing docs build for all formats (`#57 <https://github.com/ethereum/eth-hash/issues/57>`__)
+
+
 eth-hash v0.6.0 (2024-01-10)
 ----------------------------
 
