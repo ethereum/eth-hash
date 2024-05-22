@@ -62,6 +62,11 @@ setup(
     keywords="ethereum",
     packages=find_packages(exclude=["scripts", "scripts.*", "tests", "tests.*"]),
     package_data={"eth_hash": ["py.typed"]},
+    entry_points={
+            'console_scripts': [
+                'eth-hash = eth_hash.auto:main',
+            ],
+        },
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
