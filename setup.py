@@ -7,7 +7,7 @@ from setuptools import (
 extras_require = {
     "dev": [
         "build>=0.9.0",
-        "bumpversion>=0.5.3",
+        "bump_my_version>=0.19.0",
         "ipython",
         "mypy==1.10.0",
         "pre-commit>=3.4.0",
@@ -19,7 +19,7 @@ extras_require = {
         "sphinx>=6.0.0",
         "sphinx-autobuild>=2021.3.14",
         "sphinx_rtd_theme>=1.0.0",
-        "towncrier>=21,<22",
+        "towncrier>=24,<25",
     ],
     "test": [
         "pytest>=7.0.0",
@@ -55,7 +55,7 @@ setup(
     url="https://github.com/ethereum/eth-hash",
     include_package_data=True,
     install_requires=[],
-    python_requires=">=3.8, <4",
+    python_requires=">=3.9, <4",
     extras_require=extras_require,
     py_modules=["eth_hash"],
     license="MIT",
@@ -69,10 +69,10 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Natural Language :: English",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
     ],
 )

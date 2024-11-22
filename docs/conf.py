@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-#
-# eth-hash documentation build configuration file, created by
+# <PROJECT_NAME> documentation build configuration file, created by
 # sphinx-quickstart on Thu Oct 16 20:43:24 2014.
 #
 # This file is execfile()d with the current directory set to its
@@ -197,6 +195,8 @@ htmlhelp_basename = "eth_hashdoc"
 
 
 # -- Options for LaTeX output ---------------------------------------------
+
+latex_engine = "xelatex"
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
