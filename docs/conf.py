@@ -1,4 +1,4 @@
-# <PROJECT_NAME> documentation build configuration file, created by
+# eth-hash documentation build configuration file, created by
 # sphinx-quickstart on Thu Oct 16 20:43:24 2014.
 #
 # This file is execfile()d with the current directory set to its

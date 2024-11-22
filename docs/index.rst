@@ -8,7 +8,7 @@ Installation
 
 .. code-block:: bash
 
-    python -m pip install <PROJECT_NAME>
+    python -m pip install eth-hash
 
 
 .. toctree::

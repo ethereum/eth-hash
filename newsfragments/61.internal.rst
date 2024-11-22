@@ -1,0 +1,1 @@
+Merge template updates, notably adding support for ``py313`` and moving docs from the ``README`` to ReadTheDocs
