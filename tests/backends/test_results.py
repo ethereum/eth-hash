@@ -1,5 +1,5 @@
-import pickle
 import pytest
+import pickle
 
 # Note that this file is symlink'd in all backend folders, so a change here is
 # automatically shared across backend tests. If you want to add a backend-specific
