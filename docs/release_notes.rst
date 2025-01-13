@@ -3,6 +3,17 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.7.1 (2025-01-13)
+----------------------------
+
+Internal Changes - for eth-hash Contributors
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Merge template, updating CI runs and what is included in package files (`#59 <https://github.com/ethereum/eth-hash/issues/59>`__)
+- Run ``mypy`` linting locally via a ``pre-commit`` hook (`#60 <https://github.com/ethereum/eth-hash/issues/60>`__)
+- Merge template updates, notably adding support for ``py313`` and moving docs from the ``README`` to ReadTheDocs (`#61 <https://github.com/ethereum/eth-hash/issues/61>`__)
+
+
 eth-hash v0.7.0 (2024-03-01)
 ----------------------------
 

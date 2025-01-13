@@ -1,1 +1,0 @@
-Run ``mypy`` linting locally via a ``pre-commit`` hook
