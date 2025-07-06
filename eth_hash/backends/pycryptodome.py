@@ -3,9 +3,19 @@ from typing import (
     cast,
 )
 
-from Crypto.Hash import (
-    keccak,
-)
+try:
+    from Cryptodome.Hash import (
+        keccak,
+    )
+except ImportError:
+    try:
+        from Crypto.Hash import (
+            keccak,
+        )
+    except ImportError as exc:
+        raise ImportError(
+            "Could not import either 'Cryptodome' or 'Crypto' namespace. "
+            "Please install pycryptodome package.") from exc
 
 from eth_hash.abc import (
     BackendAPI,
