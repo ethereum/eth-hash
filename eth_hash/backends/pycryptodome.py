@@ -1,5 +1,4 @@
 from typing import (
-    Union,
     cast,
 )
 
@@ -33,11 +32,11 @@ class CryptodomePreimage(PreImageAPI):
 
 
 class CryptodomeBackend(BackendAPI):
-    def keccak256(self, prehash: Union[bytearray, bytes]) -> bytes:
+    def keccak256(self, prehash: bytearray | bytes) -> bytes:
         hasher = keccak.new(data=prehash, digest_bits=256)
         return cast(bytes, hasher.digest())
 
-    def preimage(self, prehash: Union[bytearray, bytes]) -> PreImageAPI:
+    def preimage(self, prehash: bytearray | bytes) -> PreImageAPI:
         return CryptodomePreimage(prehash)
 
 

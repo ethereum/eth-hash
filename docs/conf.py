@@ -17,7 +17,7 @@
 
 import os
 
-DIR = os.path.dirname("__file__")
+DIR = os.path.dirname(__file__)
 with open(os.path.join(DIR, "../setup.py"), "r") as f:
     for line in f:
         if "version=" in line:
@@ -40,6 +40,9 @@ extensions = [
     "sphinx.ext.autosectionlabel",
 ]
 
+# Mock optional backend dependencies that may not be installed
+autodoc_mock_imports = ["sha3"]
+
 suppress_warnings = ["autosectionlabel.*"]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -56,7 +59,7 @@ master_doc = "index"
 
 # General information about the project.
 project = "eth-hash"
-copyright = "2018-2023, The Ethereum Foundation"
+copyright = "2018-2025, The Ethereum Foundation"
 
 __version__ = setup_version
 # The version info for the project you're documenting, acts as replacement for

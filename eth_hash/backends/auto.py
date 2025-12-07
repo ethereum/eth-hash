@@ -1,7 +1,3 @@
-from typing import (
-    Union,
-)
-
 from eth_hash.abc import (
     BackendAPI,
     PreImageAPI,
@@ -19,10 +15,10 @@ class AutoBackend(BackendAPI):
         setattr(self, "keccak256", backend.keccak256)  # noqa: B010
         setattr(self, "preimage", backend.preimage)  # noqa: B010
 
-    def keccak256(self, in_data: Union[bytearray, bytes]) -> bytes:
+    def keccak256(self, in_data: bytearray | bytes) -> bytes:
         self._initialize()
         return self.keccak256(in_data)
 
-    def preimage(self, in_data: Union[bytearray, bytes]) -> PreImageAPI:
+    def preimage(self, in_data: bytearray | bytes) -> PreImageAPI:
         self._initialize()
         return self.preimage(in_data)

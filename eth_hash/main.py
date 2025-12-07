@@ -1,7 +1,3 @@
-from typing import (
-    Union,
-)
-
 from .abc import (
     BackendAPI,
     PreImageAPI,
@@ -14,7 +10,7 @@ class Keccak256:
         self.hasher = self._hasher_first_run
         self.preimage = self._preimage_first_run
 
-    def _hasher_first_run(self, in_data: Union[bytearray, bytes]) -> bytes:
+    def _hasher_first_run(self, in_data: bytearray | bytes) -> bytes:
         """
         Validate, on first-run, that the hasher backend is valid.
 
@@ -33,14 +29,14 @@ class Keccak256:
         self.hasher = new_hasher
         return result
 
-    def _preimage_first_run(self, in_data: Union[bytearray, bytes]) -> PreImageAPI:
+    def _preimage_first_run(self, in_data: bytearray | bytes) -> PreImageAPI:
         # Execute directly before saving method,
         # to let any side-effects settle (see AutoBackend)
         result = self._backend.preimage(in_data)
         self.preimage = self._backend.preimage
         return result
 
-    def __call__(self, preimage: Union[bytearray, bytes]) -> bytes:
+    def __call__(self, preimage: bytearray | bytes) -> bytes:
         if not isinstance(preimage, (bytearray, bytes)):
             raise TypeError(
                 "Can only compute the hash of `bytes` or `bytearray` values, "
@@ -49,7 +45,7 @@ class Keccak256:
 
         return self.hasher(preimage)
 
-    def new(self, preimage: Union[bytearray, bytes]) -> PreImageAPI:
+    def new(self, preimage: bytearray | bytes) -> PreImageAPI:
         if not isinstance(preimage, (bytearray, bytes)):
             raise TypeError(
                 "Can only compute the hash of `bytes` or `bytearray` values, "

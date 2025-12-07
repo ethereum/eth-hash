@@ -1,7 +1,3 @@
-from typing import (
-    Union,
-)
-
 from sha3 import (
     keccak_256 as _keccak_256,
 )
@@ -29,10 +25,10 @@ class Pysha3Preimage(PreImageAPI):
 
 
 class PySha3Backend(BackendAPI):
-    def keccak256(self, prehash: Union[bytearray, bytes]) -> bytes:
+    def keccak256(self, prehash: bytearray | bytes) -> bytes:
         return _keccak_256(prehash).digest()  # type: ignore
 
-    def preimage(self, prehash: Union[bytearray, bytes]) -> PreImageAPI:
+    def preimage(self, prehash: bytearray | bytes) -> PreImageAPI:
         return Pysha3Preimage(prehash)
 
 

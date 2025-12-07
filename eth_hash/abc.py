@@ -2,9 +2,6 @@ from abc import (
     ABC,
     abstractmethod,
 )
-from typing import (
-    Union,
-)
 
 
 class PreImageAPI(ABC):
@@ -27,9 +24,9 @@ class PreImageAPI(ABC):
 
 class BackendAPI(ABC):
     @abstractmethod
-    def keccak256(self, in_data: Union[bytearray, bytes]) -> bytes:
+    def keccak256(self, in_data: bytearray | bytes) -> bytes:
         ...
 
     @abstractmethod
-    def preimage(self, in_data: Union[bytearray, bytes]) -> PreImageAPI:
+    def preimage(self, in_data: bytearray | bytes) -> PreImageAPI:
         ...
