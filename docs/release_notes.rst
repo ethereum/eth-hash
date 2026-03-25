@@ -3,6 +3,12 @@ Release Notes
 
 .. towncrier release notes start
 
+eth-hash v0.8.0 (2026-03-25)
+----------------------------
+
+No significant changes.
+
+
 eth-hash v0.8.0-beta.1 (2025-12-17)
 -----------------------------------
 
