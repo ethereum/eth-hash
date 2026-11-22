@@ -27,7 +27,7 @@ extras_require = {
     ],
     # optional backends:
     "pycryptodome": [
-        "pycryptodome>=3.6.6,<4",
+        "pycryptodome>=3.6.6,<5",
     ],
     "pysha3": [
         "pysha3>=1.0.0,<2.0.0;python_version<'3.9'",

@@ -1,0 +1,1 @@
+Allow ``pycryptodome`` 4.x for the ``pycryptodome`` backend.
